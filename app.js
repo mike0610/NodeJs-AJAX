@@ -1,4 +1,4 @@
-const usersInfo = "https://jsonplaceholder.typicode.com/users";
+const usersInfo = "http://localhost:8080/";
 
 const x = document.querySelector('button');
 
@@ -12,8 +12,7 @@ x.addEventListener('click', function Show(){
             alert(`Error ${xhr.status}: ${xhr.statusText}`);
         } else { 
             let res = xhr.response;
-            let res_long = xhr.response.length;
-            let i = res_long - 1;
+            let i = res.length - 1;
             while(res[i]){
                 x.insertAdjacentHTML(
                     'afterend',
